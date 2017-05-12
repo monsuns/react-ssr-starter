@@ -1,0 +1,53 @@
+@import "../variables";
+
+$field_padding : 0.4rem;
+$border_color: #D7D7D7;
+$WarningColor: red;
+
+.component.form-field {
+  margin-top: 1rem;
+  border: 1px solid $border_color;
+  border-radius: 5px;
+  background-color: white;
+  .header {
+    padding: $field_padding;
+    .title{
+      padding-left: $field_padding;
+      font-size: $GST-FS-XL;
+      .warning-color{
+        color: $WarningColor;
+      }
+      .after-content {
+        float: right;
+      }
+    }
+  }
+  .content{
+    padding: $field_padding;
+    min-height: 1.75rem;
+    .ant-form-item{
+      &.actions,&.actions-no-gap{
+        button{
+          margin-right: .5rem;
+        }
+      }
+      &.actions{
+        padding-left: 29%;
+      }
+      @media (min-width: 992px){
+        &.actions{
+          padding-left: 10%;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 992px){
+        &.actions{
+          padding-left: 25%;
+        }
+      }
+    }
+    //no-padding-wrap
+    & > .weltBottom-wrap{
+      margin: 0 (-$field_padding) (-$field_padding) (-$field_padding);
+    }
+  }
+}

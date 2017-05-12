@@ -1,0 +1,45 @@
+/*
+ 标题 0.8rem 16px
+ 文字 0.7rem 14px
+*/
+html{
+  font-size:125%; /* 20/16=125%  1rem=20px */
+}
+body{
+  background-color:#eee;
+  font-size: .7rem;
+}
+
+.ant-table{
+  .ant-table-thead > tr > th{
+    background-color: #e1e1e1;
+  };
+  tbody{
+    background-color: #fff;
+    td{
+      padding: 0.5rem;
+    }
+  }
+  //重置表格里的formItem
+  .ant-table-row {
+    .ant-form-item{
+      margin-bottom: 0;
+    }
+  }
+}
+.ant-calendar-range-picker{
+  overflow: hidden;
+}
+.ant-select-dropdown-menu{
+  max-height: 280px;
+}
+// 内嵌表格头部
+.embed-table {
+  .ant-table {
+    .ant-table-thead > tr > th {
+      padding: 4px 8px;
+      font-weight: normal;
+      background-color: #edf8f5; //#f1f1f1;
+    }
+  }
+}

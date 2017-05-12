@@ -1,0 +1,45 @@
+@import "variables";
+body,#app,.root{
+  width: 100%;
+  height: 100%;
+  min-width: 16rem;
+}
+.wrapper{
+  min-height: calc(100vh - 3rem);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row;
+}
+.container{
+  float: left;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.page-animate-wrap{
+  position: absolute;
+  width: 100%;
+  height:calc(100% - 4rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  .page{
+    position: absolute;
+    width: 100%;
+    //height: 100%;
+    padding: 1rem;
+    min-height: 30rem;
+    & > .page-header{
+      font-size: $GST-FS-2XL;
+    }
+  }
+  .ant-spin-container{
+    .page{
+      position: relative;
+    }
+  }
+}
+// 当页面有需要更改Footer时，Footer高度变化，重新计算page的高度。
+.page-animate-wrap.custom-footer-wrap{
+  height:calc(100% - 2rem - 8rem);
+}
